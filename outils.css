@@ -1,0 +1,75 @@
+.section-outils {
+  padding: 0 2rem 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grille-outils {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.widget-vitre {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.widget-vitre h2 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.liste-ios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.liste-ios li {
+  padding: 0.9rem 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.liste-ios li:last-child {
+  border-bottom: none;
+}
+
+.liste-ios.liens a {
+  text-decoration: none;
+  color: #007aff;
+  display: block;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.liste-ios.liens a:hover {
+  color: #0056b3;
+}
+
+.liste-ios.liens a::after {
+  content: '›';
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #c7c7cc;
+}
+
+.lecteur-spotify {
+  border-radius: 12px;
+  width: 100%;
+  height: 352px;
+  border: none;
+}

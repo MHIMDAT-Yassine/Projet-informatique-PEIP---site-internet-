@@ -1,0 +1,51 @@
+.section-flux-avis {
+  padding: 0 2rem 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flux-avis {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bulle-avis {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  border-bottom-left-radius: 4px; 
+}
+
+.entete-avis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.nom-avis {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.etoiles-avis {
+  font-size: 1.1rem;
+  color: #f0c000;
+}
+
+.texte-avis {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.destination-avis {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #007aff;
+}

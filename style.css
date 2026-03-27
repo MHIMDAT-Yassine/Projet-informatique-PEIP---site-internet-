@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SF Pro Display', 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('images/fond1.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px; 
+}
+
+.barre-navigation {
+  position: fixed;
+  top: 1.5rem;
+  width: 95%;
+  max-width: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 25px; 
+  z-index: 1000;
+}
+
+.logo-conteneur {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo-texte {
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+.liens-menu a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+}
+
+.liens-menu a:hover, .liens-menu a.actif {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.banniere {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.effet-vitre {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  padding: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+}
+
+.banniere h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.banniere p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.bouton-action {
+  text-decoration: none;
+  background: linear-gradient(135deg, #6ab1f7, #4facfe);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.bouton-action:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.entete-page {
+  min-height: 50vh;
+  align-items: flex-start;
+  padding-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.entete-page .effet-vitre {
+  max-width: 900px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: auto;
+}
+
+/* Menu Hamburger pour adapter au mobile */
+
+#menu-mobile-case {
+  display: none;
+}
+
+.icone-menu {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.icone-menu span,
+.icone-menu span::before,
+.icone-menu span::after {
+  display: block;
+  background: #333;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.icone-menu span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icone-menu span::before {
+  content: '';
+  top: -8px;
+}
+
+.icone-menu span::after {
+  content: '';
+  top: 8px;
+}
+
+#menu-mobile-case:checked ~ .icone-menu span {
+  background: transparent;
+}
+
+#menu-mobile-case:checked ~ .icone-menu span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#menu-mobile-case:checked ~ .icone-menu span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+@media (max-width: 850px) {
+  .icone-menu {
+    display: block;
+  }
+  
+  .barre-navigation {
+    padding: 1rem 1.5rem;
+  }
+
+  .liens-menu {
+    display: none;
+  }
+
+  #menu-mobile-case:checked ~ .liens-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    right: 2.5%;
+    width: 95%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  .liens-menu a {
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Pour que le site soit responsive */
+
+@media (max-width: 600px) {
+  .banniere .effet-vitre {
+    padding: 2rem 1.5rem; 
+  }
+
+  .banniere h1 {
+    font-size: 1.8rem;
+  }
+
+  .banniere p {
+    font-size: 1rem;
+  }
+
+  .barre-navigation {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .banniere .effet-vitre {
+    padding: 2rem 1rem; 
+  }
+
+  .banniere h1 {
+    font-size: 1.6rem;
+  }
+
+  .bouton-action {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
