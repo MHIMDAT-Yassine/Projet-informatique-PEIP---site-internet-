@@ -17,7 +17,7 @@ Ce dépôt contient le code source de notre site web, réalisé en binôme dans 
 ## Technologies utilisées
 
 * HTML
-* CSS3
+* CSS
 
 ## Installation et exécution en local
 
