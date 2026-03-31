@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamTravel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <header class="barre-navigation">
+
+    <div class="logo-conteneur">
+      <img src="images/logo.png" alt="Logo" class="logo-image">
+      <span class="logo-texte">DreamTravel</span>
+    </div>
+
+    <input type="checkbox" id="menu-mobile-case">
+    <label for="menu-mobile-case" class="icone-menu">
+      <span></span>
+    </label>
+
+    <nav class="liens-menu">
+      <a href="index.html" class="actif">Accueil</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="conseils.html">Conseils</a>
+      <a href="avis.html">Avis</a>
+      <a href="outils.html">Outils</a>
+    </nav>
+
+  </header>
+
+  <section class="banniere">
+    <div class="contenu-banniere effet-vitre">
+      <h1>Découvrez les 10 destinations de rêve dans le monde 🌍</h1>
+      <p>Des plages paradisiaques aux montagnes majestueuses, partez à la découverte des plus beaux lieux de la planète.
+      </p>
+      <a href="#top-destinations" class="bouton-action">Explorer maintenant ↓</a>
+    </div>
+  </section>
+
+  <section id="top-destinations" class="section-destinations">
+    <h2 class="titre-section">Nos coups de cœur du moment</h2>
+
+    <div class="conteneur-grille">
+
+      <div class="carte">
+        <img src="images/bora.jpg" alt="Bora Bora" class="carte-image">
+        <div class="carte-contenu">
+          <h3>Bora Bora, Polynésie</h3>
+          <p>Lagon turquoise et bungalows sur pilotis pour une détente absolue.</p>
+          <a href="destinations.html" class="carte-lien">Voir plus ➔</a>
+        </div>
+      </div>
+
+      <div class="carte">
+        <img src="images/canada.jpg" alt="Banff" class="carte-image">
+        <div class="carte-contenu">
+          <h3>Parc de Banff, Canada</h3>
+          <p>Lacs émeraude et sommets enneigés pour une évasion au grand air.</p>
+          <a href="destinations.html#banff" class="carte-lien">Voir plus ➔</a>
+        </div>
+      </div>
+
+      <div class="carte">
+        <img src="images/costa rica.jpg" alt="Costa Rica" class="carte-image">
+        <div class="carte-contenu">
+          <h3>Costa Rica</h3>
+          <p>Plongez au cœur de la jungle, entre volcans, toucans et nature sauvage.</p>
+          <a href="destinations.html#costa-rica" class="carte-lien">Voir plus ➔</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 DreamTravel — Créé avec passion 🌴</p>
+  </footer>
+
+  <!-- C'est mon frère qui m'a écrit ce code pour régler le soucis du scroll -->
+  <script>
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+  </script>
+
+  <!-- ici juste avant que la page se recharge ou ferme, je force le scroll à (0,0) et si le nav le supporte, je désactive sa gestion auto du scroll. Je
+  lui dis de passer en 'manuel'. -->
+
+</body>
+
+</html>
