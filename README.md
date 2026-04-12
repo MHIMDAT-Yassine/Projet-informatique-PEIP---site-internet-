@@ -18,11 +18,3 @@ Ce dépôt contient le code source de notre site web, réalisé en binôme dans 
 
 * HTML
 * CSS
-
-## Installation et exécution en local
-
-Pour visualiser le projet sur votre machine :
-
-1. Clonez ce dépôt : `git clone https://github.com/yanislbz/projet-html.git`
-2. Ouvrez le dossier du projet.
-3. Double-cliquez sur le fichier `index.html` pour l'ouvrir dans votre navigateur web.
